@@ -1,5 +1,8 @@
 # go-php-print-debug
 This script search print debug from PHP code.
+Checking "print", "print_r", "var_dump", "var_export", "echo" as print debug.
+Exclude user-defined functions like echoOriginal().
+
 
 ## Usage
 ```ShellSession
