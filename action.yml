@@ -1,0 +1,15 @@
+name: "PHP Print Debug Search"
+description: "Search PHP source code for print debug statements (print, print_r, var_dump, var_export, echo)."
+inputs:
+  directories:
+    description: "Comma-separated list of directories to search for PHP print debug statements. e.g. app,vendor"
+    required: true
+    default: "."
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - -directories=${{ inputs.directories }}
+branding:
+  icon: "search"
+  color: "blue"

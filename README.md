@@ -5,6 +5,25 @@ Exclude user-defined functions like echoOriginal().
 
 
 ## Usage
+
+### As a GitHub Action
+
+Add a step to your workflow using `kotaoue/go-php-print-debug`:
+
+```yaml
+- uses: kotaoue/go-php-print-debug@main
+  with:
+    directories: app,vendor
+```
+
+#### Inputs
+
+| Name | Description | Required | Default |
+|------|-------------|----------|---------|
+| `directories` | Comma-separated list of directories to search for PHP print debug statements. | Yes | `.` |
+
+### Running locally
+
 ```ShellSession
 $ go run tools/search_print_debug/main.go -directories=app,vendor
 # root: app
